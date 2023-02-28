@@ -40,15 +40,6 @@ const GameOverScreen = () => {
     }
   }, [gameOver, highScores, score]);
 
-  const handleClose = () => {
-    if (window.ReactNativeWebView) {
-      const message = { event: "close" };
-      window.ReactNativeWebView.postMessage(JSON.stringify(message));
-    } else {
-      window.location.reload();
-    }
-  };
-
   return shown ? (
     <div
       className="game__container"
@@ -71,9 +62,7 @@ const GameOverScreen = () => {
             <h1 className="game__score">{score.toFixed(0)}</h1>
           </div>
         </div>
-        <button onClick={handleClose} className="game__menu-button">
-          Close
-        </button>
+        <h1 className="game__score-gameover-small">You'll be redirected to app in a bit</h1>
       </div>
     </div>
   ) : null;

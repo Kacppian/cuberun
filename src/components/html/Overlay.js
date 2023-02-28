@@ -64,7 +64,7 @@ const Overlay = () => {
             <>
               <button onClick={handleStart} className="game__menu-button">{'STA>RT'}</button>
               <div className="game__menu-options">
-                <button onClick={handleMusic} className="game__menu-button game__menu-button-music">{`TURN MUSIC ${musicEnabled ? 'OF>F' : 'O<N'}`}</button>
+                {/* <button onClick={handleMusic} className="game__menu-button game__menu-button-music">{`TURN MUSIC ${musicEnabled ? 'OF>F' : 'O<N'}`}</button> */}
                 <span className="game__menu-controls">
                   <p>Controls</p>
                   ← or →
